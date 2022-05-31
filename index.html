@@ -7,7 +7,7 @@
   <title>Symphony Project</title>
   <link rel="shortcut icon" href="src/window_icon_2.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <script src="indexScr.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -16,18 +16,28 @@
   <div class="LogInScreen" id="LogInScreen">
     <div class="LogInWindow" id="LogInWindow">
       <p>ВВЕДИТЕ ПАРОЛЬ</p>
+      <p class="LgError" id="LgError">Неверный пароль, попробуйте ещё раз.</p>
       <form name="login">
-        <input type="text" class="ans" id="ans" name="ans">
-        <input type="go_why_idk" class="sub" name="sub" id="sub" value="Готово">
+        <input class="ans" id="ans" name="ans" type="text" onkeydown="if(event.keyCode==13){return false;}" />  <!--onkeydown="Отмена отправки формы"--> 
+        <input type="button" class="sub" name="sub" id="sub" value="Готово">
       </form>
       <br>
-      <i>Не знаешь пароль? Пиши <a target="_blank" href="https://vk.com/tematodor" class="login_helper">сюда</a>.</i>
+      <i class="LgHint">Не знаешь пароль? Пиши <a target="_blank" href="https://vk.com/tematodor" class="login_helper">сюда</a></i>
     </div>
   </div>
   <!--------->
+
+  <!--NOTE--->
+  <div class="Note" id="Note">
+    <p>Сайт всё ещё находится в разработке!&nbsp;</p>
+    <p class="NoteTxt" id="NoteTxt">Версия сайта: Ver. 0.1.13_(30.05.22)</p>
+    <b class="closeNote" id="closeNote">Ясно</b>
+  </div>
+  <!--------->
+  
   <div class="Upper">
     <header>
-      <img src="src/window_icon_2.png" />
+      <img src="src/window_icon_2.png" width="512" height="512" alt=""/>
       <h1>Симфония - Главная</h1>
     </header>
     <nav>
